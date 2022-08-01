@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="header_container_height">60dp</dimen>
+    <dimen name="logo_size">32dp</dimen>
+    <dimen name="game_container_min_height">200dp</dimen>
+    <dimen name="bye_week_font_size">40sp</dimen>
+</resources>

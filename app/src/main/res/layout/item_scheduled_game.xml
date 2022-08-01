@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="200dp">
+
+    <!--  Home  -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_home_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/text_away_team"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="?textAppearanceHeadline5"
+        tools:text="Eagles" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_home_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/text_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_home_team"
+        android:textColor="@color/grey"
+        tools:text="0-0" />
+
+    <ImageView
+        android:id="@+id/image_home"
+        android:layout_width="@dimen/logo_size"
+        android:layout_height="@dimen/logo_size"
+        app:layout_constraintBottom_toTopOf="@id/text_date"
+        app:layout_constraintEnd_toStartOf="@id/text_week"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/text_home_record"
+        app:layout_constraintTop_toBottomOf="@id/text_home_team"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/at"
+        app:layout_constraintBottom_toBottomOf="@id/image_home"
+        app:layout_constraintEnd_toStartOf="@id/image_away"
+        app:layout_constraintStart_toEndOf="@id/image_home"
+        app:layout_constraintTop_toTopOf="@id/image_home" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/text_network"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_home_record"
+        tools:text="Mon, Sep 14" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_date"
+        tools:text="ESPN" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/text_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/grey"
+        tools:text="Week 1" />
+
+
+    <!--  Away  -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_away_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/text_home_team"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_home_team"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="?textAppearanceHeadline5"
+        tools:text="Eagles" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_away_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@id/text_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_away_team"
+        app:layout_constraintBaseline_toBaselineOf="@id/text_home_record"
+        tools:text="0-0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/text_date"
+        app:layout_constraintBottom_toTopOf="@id/text_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_away_record"
+        tools:text="7:10 PM" />
+
+    <ImageView
+        android:id="@+id/image_away"
+        android:layout_width="@dimen/logo_size"
+        android:layout_height="@dimen/logo_size"
+        app:layout_constraintBottom_toBottomOf="@id/text_at"
+        app:layout_constraintEnd_toStartOf="@id/text_away_record"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/text_week"
+        app:layout_constraintTop_toTopOf="@id/text_at"
+        tools:src="@drawable/ic_launcher_background" />
+</androidx.constraintlayout.widget.ConstraintLayout>
